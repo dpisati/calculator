@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.calc-btn {
+	background-color: silver;
+	color: black;
+	width: 56px;
+	height: 45px;
+	border: 1px solid gray;
+	text-align: center;
+	cursor: pointer;
+	font-size: 32px;
+	padding-top: 10px;
+}
+
+.calc-btn:hover{
+	background-color: #;
+}
+
+.row {
+	display: table;
+	table-layout: fixed;
+	width: 200px;
+	margin: 0;
+	padding: 0;
+}
+
+.column {
+	display: table-cell;
+}
+
+#calc-display-val {
+	width: 200px;
+	height: 52px;
+	color: white;
+	text-align: right;
+	border-left: 1px solid grey;
+	border-right: 1px solid grey;
+	border-top: 1px solid grey;
+	font-size: 48px;
+	background-color: #383838;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 15px;
+	border-radius: 7px 7px 0 0;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+}
+
+#calc-equal {
+	border-radius: 0 0 7px 0;
+}
+
+#calc-zero {
+	width: 114px;
+	border-radius: 0 0 0 7px;
+}
+
+#calc-clear {
+	width: 114px;
+}
+#calc-decimal{
+	width: 56px;
+	text-align: center;
+	padding-left: 0;
+}
+
+.calc-btn-operator {
+	background-color: orange;
+	color: white;
+	width: 56px;
+	text-align: center;
+	padding: 0px;
+}
+.calc-btn-operator:hover {
+	background-color: #d59100;
+}
+
+#calc-parent {
+	margin-left: calc(50% - 120px);
+}
