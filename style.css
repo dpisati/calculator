@@ -1,12 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import url('https://fonts.googleapis.com/css?family=Play:700');
+
+body { 
+  	background: url(images/background.jpeg) no-repeat center center fixed; 
+  	background-size: cover;
+ }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Play', sans-serif;
+	color: white;
+  	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome and Opera */
 }
 
 .calc-btn {
-	background-color: silver;
-	color: black;
+	background-color: #353535;
+	color: white;
 	width: 56px;
 	height: 45px;
 	border: 1px solid gray;
@@ -41,7 +55,7 @@ body {
 	border-right: 1px solid grey;
 	border-top: 1px solid grey;
 	font-size: 48px;
-	background-color: #383838;
+	background-color: #1a1a1a;
 	overflow: hidden;
 	white-space: nowrap;
 	padding: 15px;
@@ -50,7 +64,9 @@ body {
 
 h1 {
 	text-align: center;
-	margin-top: 50px;
+	margin: 90px;
+	font-size: 50px;
+	padding: 10px;
 }
 
 #calc-equal {
@@ -72,7 +88,7 @@ h1 {
 }
 
 .calc-btn-operator {
-	background-color: orange;
+	background-color: #515151;
 	color: white;
 	width: 56px;
 	text-align: center;
@@ -83,5 +99,10 @@ h1 {
 }
 
 #calc-parent {
+	width: 230px;
 	margin-left: calc(50% - 120px);
+	box-shadow: /*10px 10px 5px grey;*/
+	0 1px 80px 0 rgba(0, 0, 0, 0.4), 
+	0 1px 80px 0 rgba(0, 0, 0, 0.4);
+
 }

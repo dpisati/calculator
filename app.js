@@ -30,9 +30,75 @@ var	updateDisplayVal = (clickObj) => {
 		displayValElement.innerText = displayVal;
 }
 
+var performOperation = (clickObj) => {
+	var operator = clickObj.target.innerHTML;
+
+	switch (operator) {
+		case '+':
+			pendingVal = displayVal;
+			displayVal = '0';
+			displayValElement.innerText = displayVal;
+			evalStingArray.push(pendingVal);
+			evalStingArray.push('+');
+			break;
+		case '-':
+			pendingVal = displayVal;
+			displayVal = '0';
+			displayValElement.innerText = displayVal;
+			evalStingArray.push(pendingVal);
+			evalStingArray.push('-');
+			break;
+		case 'x':
+			pendingVal = displayVal;
+			displayVal = '0';
+			displayValElement.innerText = displayVal;
+			evalStingArray.push(pendingVal);
+			evalStingArray.push('*');
+			break;
+		case '/':
+			pendingVal = displayVal;
+			displayVal = '0';
+			displayValElement.innerText = displayVal;
+			evalStingArray.push(pendingVal);
+			evalStingArray.push('/');
+			break;
+		case '=':
+			evalStingArray.push(displayVal);
+			var evaluation = eval(evalStingArray.join(' '));
+			displayVal = evaluation + '';
+			displayValElement.innerHTML = displayVal;
+			evalStingArray = [];
+			break;
+		default:
+			break;
+	}
+}
+
+
 for(let i = 0; i < calcNumBtns.length; i++) {
 	calcNumBtns[i].addEventListener('click', updateDisplayVal, false);
 }
-// for(let i = 0; 1 < calcNumBtns.length; i++) {
-// 	calcOperatorBtns[i].addEventListener('click', performOperation, false);
-// }
+for(let i = 0; i < calcOperatorBtns.length; i++) {
+	calcOperatorBtns[i].addEventListener('click', performOperation, false);
+}
+
+clearBtn.onclick = () => {
+	displayVal = '0';
+	pendingVal = undefined;
+	evalStingArray = [];
+	displayValElement.innerHTML = displayVal;
+}
+
+backSpcBtn.onclick = () => {
+	let lengthOfDisplayVal = displayVal.length;
+	displayVal = displayVal.slice(0, lengthOfDisplayVal - 1);
+	if (displayVal === '')
+		displayVal = '0';
+	displayValElement.innerHTML = displayVal;
+}
+
+decimalBtn.onclick = () => {
+	if (!displayVal.includes('.'))
+		displayVal += '.';
+	displayValElement.innerHTML = displayVal;
+}
