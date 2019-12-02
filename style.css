@@ -1,108 +1,135 @@
-
-@import url('https://fonts.googleapis.com/css?family=Play:700');
-
-body { 
-  	background: url(images/background.jpeg) no-repeat center center fixed; 
-  	background-size: cover;
- }
+@import url("https://fonts.googleapis.com/css?family=Play:700");
 
 body {
-	font-family: 'Play', sans-serif;
-	color: white;
-  	-webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
+  background: url(images/background.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  height: 70vh;
+}
+
+body {
+  font-family: "Play", sans-serif;
+  color: white;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
     supported by Chrome and Opera */
 }
 
 .calc-btn {
-	background-color: #353535;
-	color: white;
-	width: 56px;
-	height: 45px;
-	border: 1px solid gray;
-	text-align: center;
-	cursor: pointer;
-	font-size: 32px;
-	padding-top: 10px;
+  background-color: #353535;
+  color: white;
+  width: 56px;
+  height: 45px;
+  border: 1px solid gray;
+  text-align: center;
+  cursor: pointer;
+  font-size: 32px;
+  padding-top: 10px;
 }
 
-.calc-btn:hover{
-	background-color: #d59100;
+.calc-btn:hover {
+  background-color: #d59100;
 }
 
 .row {
-	display: table;
-	table-layout: fixed;
-	width: 200px;
-	margin: 0;
-	padding: 0;
+  display: table;
+  table-layout: fixed;
+  width: 200px;
+  margin: 0;
+  padding: 0;
 }
 
 .column {
-	display: table-cell;
+  display: table-cell;
 }
 
 #calc-display-val {
-	width: 200px;
-	height: 52px;
-	color: white;
-	text-align: right;
-	border-left: 1px solid grey;
-	border-right: 1px solid grey;
-	border-top: 1px solid grey;
-	font-size: 48px;
-	background-color: #1a1a1a;
-	overflow: hidden;
-	white-space: nowrap;
-	padding: 15px;
-	border-radius: 7px 7px 0 0;
+  width: 200px;
+  height: 52px;
+  color: white;
+  text-align: right;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-top: 1px solid grey;
+  font-size: 48px;
+  background-color: #1a1a1a;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 15px;
+  border-radius: 7px 7px 0 0;
 }
 
 h1 {
-	text-align: center;
-	margin: 90px;
-	font-size: 50px;
-	padding: 10px;
+  text-align: center;
+  margin: 90px;
+  font-size: 50px;
+  padding: 10px;
 }
 
 #calc-equal {
-	border-radius: 0 0 7px 0;
+  border-radius: 0 0 7px 0;
 }
 
 #calc-zero {
-	width: 114px;
-	border-radius: 0 0 0 7px;
+  width: 114px;
+  border-radius: 0 0 0 7px;
 }
 
 #calc-clear {
-	width: 114px;
+  width: 114px;
 }
-#calc-decimal{
-	width: 56px;
-	text-align: center;
-	padding-left: 0;
+#calc-decimal {
+  width: 56px;
+  text-align: center;
+  padding-left: 0;
 }
 
 .calc-btn-operator {
-	background-color: #515151;
-	color: white;
-	width: 56px;
-	text-align: center;
-	padding: 0px;
+  background-color: #515151;
+  color: white;
+  width: 56px;
+  text-align: center;
+  padding: 0px;
 }
 .calc-btn-operator:hover {
-	background-color: #d59100;
+  background-color: #d59100;
 }
 
 #calc-parent {
-	width: 230px;
-	margin-left: calc(50% - 120px);
-	box-shadow: /*10px 10px 5px grey;*/
-	0 1px 80px 0 rgba(0, 0, 0, 0.4), 
-	0 1px 80px 0 rgba(0, 0, 0, 0.4);
+  width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: /*10px 10px 5px grey;*/ 0 1px 80px 0 rgba(0, 0, 0, 0.4),
+    0 1px 80px 0 rgba(0, 0, 0, 0.4);
+}
 
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+  body {
+    height: 90vh;
+  }
+  h1 {
+    font-size: 5vh;
+  }
+
+  #calc-parent {
+    padding: 5vh;
+    width: 80vw;
+  }
+  .row {
+    width: 80vw;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+  }
+  .calc-btn {
+    padding-top: 3vh;
+    font-size: 4vh;
+  }
+  #calc-display-val {
+    font-size: 5vh;
+    padding: 3vh;
+  }
 }
