@@ -21,10 +21,6 @@ var displayVal = "0";
 var pendingVal;
 var evalStingArray = [];
 
-var num = Number(0.005); // The Number() only visualizes the type and is not needed
-var roundedString = num.toFixed(2);
-var rounded = Number(roudedString); // toFixed() returns a string (often suitable for printing already)
-
 var updateDisplayVal = clickObj => {
   var btnText = clickObj.target.innerText;
 
