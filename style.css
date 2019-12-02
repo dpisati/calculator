@@ -4,9 +4,6 @@ body {
   background: url(images/background.jpeg) no-repeat center center fixed;
   background-size: cover;
   height: 70vh;
-}
-
-body {
   font-family: "Play", sans-serif;
   color: white;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -22,12 +19,12 @@ body {
   background-color: #353535;
   color: white;
   width: 56px;
-  height: 45px;
+  height: 7vh;
   border: 1px solid gray;
   text-align: center;
   cursor: pointer;
   font-size: 32px;
-  padding-top: 10px;
+  padding-top: 4vh;
 }
 
 .calc-btn:hover {
@@ -37,7 +34,7 @@ body {
 .row {
   display: table;
   table-layout: fixed;
-  width: 200px;
+  width: 25vw;
   margin: 0;
   padding: 0;
 }
@@ -64,9 +61,9 @@ body {
 
 h1 {
   text-align: center;
-  margin: 90px;
-  font-size: 50px;
-  padding: 10px;
+  margin: 4vh;
+  font-size: 5vh;
+  padding: 4vh;
 }
 
 #calc-equal {
@@ -99,7 +96,7 @@ h1 {
 }
 
 #calc-parent {
-  width: 230px;
+  width: 25vw;
   margin-left: auto;
   margin-right: auto;
   box-shadow: /*10px 10px 5px grey;*/ 0 1px 80px 0 rgba(0, 0, 0, 0.4),
@@ -114,10 +111,6 @@ h1 {
     font-size: 5vh;
   }
 
-  #calc-parent {
-    padding: 5vh;
-    width: 80vw;
-  }
   .row {
     width: 80vw;
     height: 10vh;
@@ -131,5 +124,72 @@ h1 {
   #calc-display-val {
     font-size: 5vh;
     padding: 3vh;
+  }
+  #calc-parent {
+    padding-top: 5px;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    height: 90vh;
+  }
+  h1 {
+    font-size: 5vh;
+  }
+
+  .row {
+    width: 40vw;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+  }
+  .calc-btn {
+    padding-top: 3vh;
+    font-size: 4vh;
+  }
+  #calc-display-val {
+    font-size: 5vh;
+    padding: 3vh;
+  }
+  #calc-parent {
+    padding-top: 5px;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: 90vh;
+  }
+  h1 {
+    font-size: 5vh;
+  }
+
+  .row {
+    width: 80vw;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+  }
+  .calc-btn {
+    background-color: red;
+    padding-top: 3vh;
+    font-size: 4vh;
+  }
+  #calc-display-val {
+    font-size: 5vh;
+    padding: 3vh;
+  }
+  #calc-parent {
+    padding-top: 5px;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
