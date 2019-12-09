@@ -133,37 +133,7 @@ h1 {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    height: 90vh;
-  }
-  h1 {
-    font-size: 5vh;
-  }
-
-  .row {
-    width: 40vw;
-    height: 10vh;
-    margin: 0;
-    padding: 0;
-  }
-  .calc-btn {
-    padding-top: 3vh;
-    font-size: 4vh;
-  }
-  #calc-display-val {
-    font-size: 5vh;
-    padding: 3vh;
-  }
-  #calc-parent {
-    padding-top: 5px;
-    width: 40vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   body {
     height: 90vh;
   }
@@ -178,7 +148,6 @@ h1 {
     padding: 0;
   }
   .calc-btn {
-    background-color: red;
     padding-top: 3vh;
     font-size: 4vh;
   }
